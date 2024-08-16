@@ -52,9 +52,9 @@ jobs:
 
     - name: Stop running container
       run: |
-        ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@3.86.140.155 'sudo docker stop cddemo || true'
-        ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@3.86.140.155 'sudo docker rm cddemo || true'
+        ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@54.224.58.139 'sudo docker stop cddemo || true'
+        ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@54.224.58.139 'sudo docker rm cddemo || true'
 
     - name: Run new container
       run: |
-        ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@3.86.140.155 'sudo docker run -d --name cddemo -p 80:3000 ashokpoudel/cddemo:latest'
+        ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@54.224.58.139 'sudo docker run -d --name cddemo -p 80:3000 ashokpoudel/cddemo:latest'
